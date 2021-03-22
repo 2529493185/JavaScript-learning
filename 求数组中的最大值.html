@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>求数组中的最大值</title>
+    <script>
+        //求数组[2,6,1,77,52,25,7]中最大值
+        //声明一个保存最大元素的变量 max
+        //默认最大值可以取数组中的第一个元素
+        //遍历这个数组，把里面每一个数组元素和max比较
+        //最后输出这个max
+        var arr = [2, 6, 1, 77, 52, 25, 7];
+        /* var max = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        console.log('该数组里面的最大值是'+ max); */
+
+
+        var min = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        console.log('该数组里面的最小值是' + min);
+    </script>
+</head>
+
+</html>

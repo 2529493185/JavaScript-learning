@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>for循环语句</title>
+    <script>
+        //1. for 重复执行某些代码，通常跟计数有关
+        //2. for 语法结构
+        /* for(初始化变量; 条件表达式;操作表达式){
+            //循环体
+        } */
+        //3.初始化变量 就是用var 申明的一个普通变量，通常用于作为计数器使用
+        //4.条件表达式就是终止的条件
+        //5.操作表达式：递增或者递减
+        //6.代码体验  重复打100句 你好
+        /* for (var i = 1; i <= 100; i++) {
+            console.log('你好吗');
+        }
+ */
+
+        //我们可以让用户控制输出的次数
+        /*  var num = prompt('请您输入次数');
+        for (var i = 1; i <= num; i++) {
+            console.log('你好');
+        }
+ */
+
+        //for 循环可以重复执行不同的代码 因为我们有计算器变量i的存在i每次循环都会变化
+        //我们要输出1个人 1~100岁
+        /*  for (var i = 1; i <= 100; i++) {
+             console.log('这个人今年' + i + '岁了');
+         } */
+
+
+
+        //弹出输入框输入班级人数（num）
+        //依次输入学生的成绩（保存起来score）
+        //用for循环 弹出的次数跟班级总人数有关系 条件表达式 i <=num
+        //进行业务处理：计算成绩，先求总成绩（sum），再求平均成绩（average）
+        //弹出结果
+        var num = prompt('亲输入班级总人数'); //num是总的班级人数
+        var sum = 0; //求和的变量
+        var average = 0; //求平均值的变量
+        for (var i = 1; i <= num; i++) {
+            var score = prompt('请您输入第' + i + '个学生成绩');
+            //因为从prompt取过来的数据是字符串型的，需要转换为数字型
+            sum = sum + parseFloat(score);
+        }
+        average = sum / num;
+        alert('班级总的成绩是' + sum);
+        alert('班级平均分是' + average);
+    </script>
+</head>
+
+</html>

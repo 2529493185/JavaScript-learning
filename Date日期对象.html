@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Date() 日期对象 是一个构造函数 必须使用new 来调用创建我们的日期对象
+    //var arr = new Array(); //创建了一个数组对象
+    //var obj = new Object();//创建了一个对象实例
+    //1.使用Date  如果没有参数 返回当前系统的当前时间
+    var date = new Date();
+    console.log(date);
+    //2.参数常用的写法 数字型 2019，10，01  或者是字符串型 '2019-10-1 8:8:8'
+    var date1 = new Date(2019,10,11);
+    console.log(date1);//返回的是11月 不是10月
+
+    var date2 = new Date('2019-10-11 8:8:8');
+    console.log(date2);
+
+    //格式化日期 年月日
+    var date3 = new Date();
+    console.log(date.getFullYear());    //返回当前日期的年 2021
+    console.log(date.getMonth() + 1);   //月份 返回的月份小1个月 所以记得月份+1
+    console.log(date.getDate());    //返回的是 几号
+    console.log(date.getDay()); //周几 周一返回的是1 周六返回的是6  周日返回的是0
+    //我们写一个汉字版的
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var dates = date.getDate();
+
+    var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    var day = date.getDay();
+    console.log('今天是：' + year + '年' + month + '月' + dates + '日 ' + arr[day]);
+    
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>数据类型</title>
+        <script>
+            // int num = 10; java
+            // var num;  // 这里的num 我们是不确定属于哪种数据类型的
+            var num = 10;  //  num属于数字型
+            // js 的变量数据类型是只有程序在运行过程中，根据等号右边的值来确定的
+            var str = 'pink'; //str 字符串型
+            // js是动态语言 变量的数据类型是可以变化的
+            var x = 10; // x 是数字型
+            var pi = 3.14; // pi 是数字型
+            x = 'pink'; // x 是字符串型
+
+            //1.八进制 0 ~ 7 我们程序里面数字前面加0 表示八进制
+            var num1 = 010;
+            console.log(num1);  //010 八进制 转化为10进制就是8
+            var num2 = 012;
+            console.log(num2);
+            //2.十六进制 0 ~ 9  a ~ f      数字前面加 0x 表示十六进制
+            var num3 = 0x9;
+            console.log(num3);
+            var num4 = 0xa;
+            console.log(num4);
+            //3.无穷大
+            console.log(Number.MAX_VALUE * 2); //Infinity 无穷大
+            //4.非数值
+            console.log('pink'-100);    //NaN
+            //5. isNaN()  这个方法用来是否为判断非数字    
+        </script>
+    </head>
+    <body></body>
+    </html>

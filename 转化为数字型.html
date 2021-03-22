@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>转换为数字型</title>
+        <script>
+            var age = prompt('请输入您的年龄');
+            //1.parseInt(变量)  可以把字符型转换为数字型 得到是整数
+            console.log(parseInt(age));
+            console.log(parseInt('120px'));//120 会去掉这个px单位
+            //2.parseFloat(变量) 可以把字符型转换为数字型 得到是小数，浮点数
+            console.log(parseFloat('3.14'));
+            //3.利用 Number(变量)
+            var str = '123';
+            console.log(Number(str));
+            console.log(Number('12'));
+            //4.利用算数运算- * / 隐式转换
+            console.log('12' - 0);//12
+            console.log('123'-'120');//3
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

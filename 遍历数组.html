@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>遍历数组</title>
+    <script>
+        //遍历数组：把数组的元素从头到尾访问一次
+        /* var arr = ['red', 'green', 'blue'];
+        for (var i = 0; i < 3; i++) {
+            console.log(arr[i]);
+        } */
+        //1.因为我们的数组索引号从0开始， 所以i必须从0开始，i<3
+        //2.输出的时候arr[i] i计数器当索引号用
+
+        //数组长度  数组名.length
+        var arr1 = ['关羽', '张飞', '马超', '赵云', '黄忠', '刘备', '姜维']
+        for (var i = 0; i < arr1.length; i++) {
+            console.log(arr1[i]);
+        }
+        console.log(arr1.length); //查看数组元素有多少个,方便
+        //1.数组的长度是元素的个数 不要跟索引号混淆
+        //2.arr.length 动态检测数组的个数
+    </script>
+</head>
+
+</html>
