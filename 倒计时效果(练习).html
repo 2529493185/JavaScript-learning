@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function result(time){      //time只是个形参
+        var nowTime = +new Date();  //获得当前总的毫秒数
+        var betTime = +new Date(time);  //形参是将来用户log输入的用户需要的毫秒数
+        var allsTime =(betTime - nowTime) / 1000;   //获得总的相差秒数
+        var d = parseInt (allsTime / 60 / 60 / 24);             //切记加parseInt 否则可能除不尽
+        d < 10 ? '0' + d : d;                   //补零操作
+        var h = parseInt (allsTime / 60 / 60 % 24);
+        h < 10 ? '0' + h : h;
+        var m = parseInt(allsTime / 60 % 60);
+        m < 10 ? '0' + m : m;
+        var s = parseInt(allsTime % 60);
+        s > 10 ? '0' + s : s;
+
+        return d + '天' + h + '小时' + m + '分钟' + s + '秒';   //return 
+    }
+    console.log(result('2021-3-23 19:00'));
+    var thisTime = new Date();
+    console.log(thisTime);
+</script>
+</html>
