@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //查找字符串'abcoefoxyozzopp'中所有o所出现的位置以及次数
+    //核心算法：先查找第一个o出现的位置
+    //然后 只要indexOf 返回的结果不是-1 就继续往后查找
+    //因为indexOf 只能查找第一个，所以后面的查找，一定是当前索引加1，从而继续查找
+
+    // var str = "abcoefoxyozzopp";
+    // var index = str.indexOf('o');
+    // var num = 0;
+    // //console.log(index);
+    // while(index !== -1){
+    //     console.log(index);
+    //     num++;
+    //     index=str.indexOf('o',index+1);
+    // }
+    // console.log('o出现的次数是：' + num);
+
+
+
+    //课后作业['red','blue','red','green','pink','red'],求red出现的位置和次数
+    var arr = ['red','blue','red','green','pink','red'];       
+        var oneRed = arr.indexOf('red');        //求出第一次red出现的索引号码       
+        var num = 0;    //num为循环次数 也为red出现次数
+        while(oneRed !== -1){       //oneRed !== -1的话，说明数组里面还有数组元素       indexOf(数组元素) 没有元素的话输出-1
+            console.log(oneRed);    //输出索引号
+            num++;
+            oneRed = arr.indexOf('red',oneRed + 1);     //one + 1 是从得到red的下个索引号开始下一轮循环     如：indexOf('red',4)    就是从索引号为4开始往后面找'red'，找到并输出其索引号
+           
+        }
+        console.log('red出现的次数'+ num);
+</script>
+</html>
